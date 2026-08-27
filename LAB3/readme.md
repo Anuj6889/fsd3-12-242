@@ -10,3 +10,14 @@ scalable network application and web servers.
 3. Build REST APIs
 4. Non-Blocking I/O
 5. Foundation of Express.js
+6. If i want to run 
+
+
+## http status cosdes
+- 200 -> OK
+- 201 -> Created
+- 400 -> Bad Request
+- 401 -> Unauthorized
+- 403 -> Forbidden
+- 404 -> Not Found
+- 500 -> Internal Server Error

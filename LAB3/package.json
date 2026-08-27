@@ -5,12 +5,16 @@
   "main": "prg1.js",
   "scripts": {
     "start": "node prg3.js",
-    "dev"   : "nodemon prg3.js"},
+    "dev": "nodemon prg4.js"
+  },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "type": "module",
   "devDependencies": {
     "nodemon": "^3.1.14"
+  },
+  "dependencies": {
+    "bootstrap": "^5.3.8"
   }
 }

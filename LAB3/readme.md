@@ -1,23 +1,46 @@
-# HTTP Module
+# HTTP Module 
+it is built in NODE.js module which allows developers to create web server ans web client without installing any external package 
+one of the  msot important mdooule in NODE.js , originally designed for building scalable network application and web servers 
 
-It is built in Node.js Module which allows developers to create web server and
-web client without installing any external package.
-One of the most important module in Node.js, originally designed for building
-scalable network application and web servers.
+- 1. create web server 
+- 2. handle client request 
+- 3. build REST APIs 
+- 4. non-blocking I/O
+Foundation of Express.js
 
-1. Create web servers
-2. Handle client request
-3. Build REST APIs
-4. Non-Blocking I/O
-5. Foundation of Express.js
-6. If i want to run 
+HTTP - Hyper text transfer protocol 
+HTML - Hyper text markup language 
 
+computer have 2^32 pores it like mouth and ears of computer which we use to feed 
 
-## http status cosdes
-- 200 -> OK
-- 201 -> Created
-- 400 -> Bad Request
-- 401 -> Unauthorized
-- 403 -> Forbidden
-- 404 -> Not Found
-- 500 -> Internal Server Error
+to run in serve we use - npm ( node package module ) start 
+
+ - npm i nodemon -D 
+
+ ## http status codes -> res.WriteHead(), res.StatusCode
+ - 200 -> ok
+ - 201 -> Created
+ - 400 -> Bad request 
+ - 401 -> unauthorized 
+ - 403 -> forbidden 
+ - 404 -> Not Found 
+ - 500 -> Internal Server Error 
+
+### server can send to the client 
+ 1. HTML content 
+ 2. html file 
+ 3. json file
+ 4. plain file
+ 5. js file
+ 6. any file to download 
+ 7. etc
+
+## Type of information -> res.WriteHead(), res.setHeader( )
+
+1. text/html -> for html file/contents
+2. text/json -> for json data
+3. text/css -> for css file/sontents
+4. application -> for file
+5. text/plan -> for plain text file
+
+### Note: .gitignor -> this file contains the list of files or folder that is not added to git, these file.folder will not push on GitHub

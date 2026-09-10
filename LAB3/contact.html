@@ -1,0 +1,691 @@
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Contact Us - IndiaCorp</title>
+
+    <style>
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        body {
+            background: #f5f7fb;
+            color: #172033;
+        }
+
+        /* ================= HEADER ================= */
+
+        header {
+            background: linear-gradient(135deg, #0f172a, #1e3a8a);
+            color: white;
+            padding: 55px 8%;
+        }
+
+        .header-content {
+            max-width: 1200px;
+            margin: auto;
+        }
+
+        .badge {
+            display: inline-block;
+            background: rgba(255,255,255,0.15);
+            padding: 7px 14px;
+            border-radius: 20px;
+            font-size: 13px;
+            margin-bottom: 18px;
+        }
+
+        header h1 {
+            font-size: 46px;
+            margin-bottom: 15px;
+        }
+
+        header p {
+            max-width: 700px;
+            line-height: 1.7;
+            color: #dbeafe;
+        }
+
+        /* ================= NAV ================= */
+
+        nav {
+            background: white;
+            padding: 15px 8%;
+            border-bottom: 1px solid #e5e7eb;
+            position: sticky;
+            top: 0;
+            z-index: 10;
+        }
+
+        .nav-inner {
+            max-width: 1200px;
+            margin: auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-size: 20px;
+            font-weight: bold;
+            color: #1e3a8a;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 25px;
+        }
+
+        .nav-links a {
+            text-decoration: none;
+            color: #64748b;
+            font-size: 14px;
+        }
+
+        .nav-links a:hover,
+        .nav-links a.active {
+            color: #1d4ed8;
+        }
+
+        /* ================= MAIN ================= */
+
+        main {
+            max-width: 1200px;
+            margin: 40px auto;
+            padding: 0 20px;
+        }
+
+        /* ================= CONTACT LAYOUT ================= */
+
+        .contact-grid {
+            display: grid;
+            grid-template-columns: 0.8fr 1.2fr;
+            gap: 25px;
+        }
+
+        /* ================= INFO CARD ================= */
+
+        .info-card {
+            background: white;
+            border: 1px solid #e5e7eb;
+            border-radius: 16px;
+            padding: 28px;
+            height: fit-content;
+        }
+
+        .info-card h2 {
+            font-size: 25px;
+            margin-bottom: 10px;
+        }
+
+        .info-card > p {
+            color: #64748b;
+            line-height: 1.6;
+            font-size: 14px;
+            margin-bottom: 25px;
+        }
+
+        .info-box {
+            background: #f8fafc;
+            padding: 17px;
+            border-radius: 10px;
+            margin-bottom: 12px;
+        }
+
+        .info-box small {
+            display: block;
+            color: #64748b;
+            margin-bottom: 6px;
+            font-size: 12px;
+        }
+
+        .info-box strong {
+            font-size: 14px;
+        }
+
+        /* ================= FORM ================= */
+
+        .form-card {
+            background: white;
+            border: 1px solid #e5e7eb;
+            border-radius: 16px;
+            padding: 28px;
+        }
+
+        .form-card h2 {
+            font-size: 25px;
+            margin-bottom: 8px;
+        }
+
+        .form-card > p {
+            color: #64748b;
+            font-size: 14px;
+            margin-bottom: 25px;
+        }
+
+        .form-row {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 18px;
+        }
+
+        .form-group {
+            margin-bottom: 18px;
+        }
+
+        label {
+            display: block;
+            font-size: 13px;
+            font-weight: 600;
+            margin-bottom: 7px;
+        }
+
+        input,
+        select,
+        textarea {
+            width: 100%;
+            padding: 13px;
+            border: 1px solid #d1d5db;
+            border-radius: 9px;
+            font-size: 14px;
+            outline: none;
+            background: white;
+            color: #172033;
+        }
+
+        input:focus,
+        select:focus,
+        textarea:focus {
+            border-color: #2563eb;
+        }
+
+        textarea {
+            height: 130px;
+            resize: vertical;
+        }
+
+        .submit-btn {
+            width: 100%;
+            padding: 12px;
+            border: none;
+            background: #172554;
+            color: white;
+            border-radius: 8px;
+            cursor: pointer;
+            font-size: 15px;
+            transition: 0.2s;
+        }
+
+        .submit-btn:hover {
+            background: #1d4ed8;
+        }
+
+        /* ================= NOTE ================= */
+
+        .note {
+            margin-top: 18px;
+            padding: 14px;
+            background: #eff6ff;
+            border-radius: 9px;
+            color: #475569;
+            font-size: 13px;
+            line-height: 1.5;
+        }
+
+        /* ================= FOOTER ================= */
+
+        footer {
+            margin-top: 60px;
+            background: #0f172a;
+            color: #cbd5e1;
+            text-align: center;
+            padding: 30px;
+            font-size: 13px;
+        }
+
+        /* ================= RESPONSIVE ================= */
+
+        @media (max-width: 900px) {
+
+            .contact-grid {
+                grid-template-columns: 1fr;
+            }
+
+            header h1 {
+                font-size: 38px;
+            }
+
+        }
+
+        @media (max-width: 600px) {
+
+            header {
+                padding: 40px 6%;
+            }
+
+            header h1 {
+                font-size: 32px;
+            }
+
+            .form-row {
+                grid-template-columns: 1fr;
+                gap: 0;
+            }
+
+            .nav-links {
+                gap: 12px;
+            }
+
+            .nav-links a {
+                font-size: 12px;
+            }
+
+        }
+
+    </style>
+
+</head>
+
+<body>
+
+    <!-- ================= HEADER ================= -->
+
+    <header>
+
+        <div class="header-content">
+
+            <span class="badge">
+                🇮🇳 IndiaCorp • Product Enquiry
+            </span>
+
+            <h1>
+                Contact Us
+            </h1>
+
+            <p>
+                Have a question about a company, product or business?
+                Send us your enquiry and our team will get back to you.
+            </p>
+
+        </div>
+
+    </header>
+
+
+    <!-- ================= NAV ================= -->
+
+    <nav>
+
+        <div class="nav-inner">
+
+            <div class="logo">
+                IndiaCorp
+            </div>
+
+            <div class="nav-links">
+
+                <a href="index.html">
+                    Home
+                </a>
+
+                <a href="product.html">
+                    Companies
+                </a>
+
+                <a href="contact.html" class="active">
+                    Contact
+                </a>
+
+            </div>
+
+        </div>
+
+    </nav>
+
+
+    <!-- ================= MAIN ================= -->
+
+    <main>
+
+        <div class="contact-grid">
+
+            <!-- ================= CONTACT INFO ================= -->
+
+            <section class="info-card">
+
+                <h2>
+                    Get in Touch
+                </h2>
+
+                <p>
+                    Use the enquiry form to ask questions about
+                    companies, products, business information or
+                    other details listed on IndiaCorp.
+                </p>
+
+
+                <div class="info-box">
+
+                    <small>
+                        Email
+                    </small>
+
+                    <strong>
+                        enquiry@indiacorp.com
+                    </strong>
+
+                </div>
+
+
+                <div class="info-box">
+
+                    <small>
+                        Phone
+                    </small>
+
+                    <strong>
+                        +91 98765 43210
+                    </strong>
+
+                </div>
+
+
+                <div class="info-box">
+
+                    <small>
+                        Location
+                    </small>
+
+                    <strong>
+                        India
+                    </strong>
+
+                </div>
+
+
+                <div class="info-box">
+
+                    <small>
+                        Response Time
+                    </small>
+
+                    <strong>
+                        Within 24 hours
+                    </strong>
+
+                </div>
+
+
+                <div class="note">
+
+                    <strong>Note:</strong>
+                    IndiaCorp is an educational project.
+                    Company information displayed on this website
+                    is based on publicly available information.
+
+                </div>
+
+            </section>
+
+
+            <!-- ================= ENQUIRY FORM ================= -->
+
+            <section class="form-card">
+
+                <h2>
+                    Product Enquiry
+                </h2>
+
+                <p>
+                    Fill in the details below to send your enquiry.
+                </p>
+
+
+                <form>
+
+                    <div class="form-row">
+
+                        <div class="form-group">
+
+                            <label for="name">
+                                Full Name
+                            </label>
+
+                            <input
+                                type="text"
+                                id="name"
+                                placeholder="Enter your name"
+                                required
+                            >
+
+                        </div>
+
+
+                        <div class="form-group">
+
+                            <label for="email">
+                                Email Address
+                            </label>
+
+                            <input
+                                type="email"
+                                id="email"
+                                placeholder="Enter your email"
+                                required
+                            >
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="form-row">
+
+                        <div class="form-group">
+
+                            <label for="phone">
+                                Phone Number
+                            </label>
+
+                            <input
+                                type="tel"
+                                id="phone"
+                                placeholder="Enter your phone number"
+                            >
+
+                        </div>
+
+
+                        <div class="form-group">
+
+                            <label for="company">
+                                Company
+                            </label>
+
+                            <select id="company">
+
+                                <option value="">
+                                    Select company
+                                </option>
+
+                                <option>
+                                    Reliance Industries
+                                </option>
+
+                                <option>
+                                    Tata Consultancy Services
+                                </option>
+
+                                <option>
+                                    Infosys
+                                </option>
+
+                                <option>
+                                    HCLTech
+                                </option>
+
+                                <option>
+                                    HDFC Bank
+                                </option>
+
+                                <option>
+                                    ICICI Bank
+                                </option>
+
+                                <option>
+                                    State Bank of India
+                                </option>
+
+                                <option>
+                                    Bharti Airtel
+                                </option>
+
+                                <option>
+                                    Tata Motors
+                                </option>
+
+                                <option>
+                                    Mahindra & Mahindra
+                                </option>
+
+                                <option>
+                                    Maruti Suzuki India
+                                </option>
+
+                                <option>
+                                    ITC Limited
+                                </option>
+
+                                <option>
+                                    Hindustan Unilever
+                                </option>
+
+                                <option>
+                                    Sun Pharmaceutical
+                                </option>
+
+                                <option>
+                                    Larsen & Toubro
+                                </option>
+
+                                <option>
+                                    Tata Steel
+                                </option>
+
+                                <option>
+                                    JSW Steel
+                                </option>
+
+                                <option>
+                                    Titan Company
+                                </option>
+
+                                <option>
+                                    Other
+                                </option>
+
+                            </select>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="form-group">
+
+                        <label for="enquiry">
+                            Enquiry Type
+                        </label>
+
+                        <select id="enquiry" required>
+
+                            <option value="">
+                                Select enquiry type
+                            </option>
+
+                            <option>
+                                Product Information
+                            </option>
+
+                            <option>
+                                Company Information
+                            </option>
+
+                            <option>
+                                Business Enquiry
+                            </option>
+
+                            <option>
+                                Partnership
+                            </option>
+
+                            <option>
+                                General Question
+                            </option>
+
+                            <option>
+                                Other
+                            </option>
+
+                        </select>
+
+                    </div>
+
+
+                    <div class="form-group">
+
+                        <label for="message">
+                            Your Message
+                        </label>
+
+                        <textarea
+                            id="message"
+                            placeholder="Write your enquiry here..."
+                            required
+                        ></textarea>
+
+                    </div>
+
+
+                    <button
+                        type="submit"
+                        class="submit-btn"
+                    >
+                        Send Enquiry →
+                    </button>
+
+                </form>
+
+            </section>
+
+        </div>
+
+    </main>
+
+
+    <!-- ================= FOOTER ================= -->
+
+    <footer>
+
+        <p>
+            Indian Companies Explorer
+        </p>
+
+        <p style="margin-top:8px;">
+            Educational project • Publicly available company information
+        </p>
+
+    </footer>
+
+</body>
+</html>
+```
